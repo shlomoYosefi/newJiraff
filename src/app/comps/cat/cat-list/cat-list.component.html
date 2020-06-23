@@ -1,0 +1,22 @@
+ <div class="wrap">
+    <h1>welcom to cat array</h1><br/><br/>
+
+    <app-add-cat
+    (addName)='cat.name =$event'
+    (addAge)='cat.age =$event'
+    (addMale)='cat.male =$event'
+    (addcolor)='cat.color =$event'
+    (add)='arrayCats.push($event)'
+    
+    ></app-add-cat>
+
+    <ul>
+        <app-cat-item 
+        *ngFor ='let i of arrayCats'
+        [cat]='i'
+        >
+        </app-cat-item>
+    </ul>
+    
+    
+</div>
